@@ -1,0 +1,40 @@
+*,
+*: after,
+*: before{
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+}
+
+img{
+	width: 100px;
+}
+
+body {
+	background: linear-gradient(#fcae1b, #f26522);
+	/*background: url(Assets/background.svg) center no-repeat ;*/
+	min-height: 150px;
+}
+.cabecalho{ 
+	width: 32%;
+	margin-left: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+}
+.cabecalho-logo{}
+.cabecalho-nav{}
+.cabecalhoNav-form{}
+.navForm-texto{}
+.navForm-botao{}
+.cabecalhoNav-item{}
+.navItem-logo{}
+.conteudo{}
+.conteudoTexto-titulo{}
+.conteudoTexto-parag{}
+.conteudo-vnw{}
+.conteudoVnw-logo{}
+.conteudoVnw-parag{}
+.conteudoVnw-link{}
+.rodape{}
+.rodape-logo{}
