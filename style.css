@@ -1,46 +1,43 @@
 *,
-*: after,
-*: before{
+*:after,
+*:before{
 	margin: 0; 
 	padding: 0;
 	box-sizing: border-box;
 }
 
-img{
-	width: 100px;
-}
-
 body {
 	min-height: 150px;
 	background-color: #fcae1b;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 .cabecalho{
 	background: url(Assets/background.svg) center no-repeat;
 	background-size: cover;
+	width: 100%;
 	height: 100vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
-	/*width: 100%
-	margin-left: 2%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;*/
+}
+@media(max-width: 640px){
+	.cabecalho{
+		display: none;
+	}
 }
 .cabecalho-conteudo{
+	min-width: 300px;
 	width: 32%;
-	min-height: 500px;
-	margin-top: 16px;
-	margin-left: 2%;
+	min-height: 70vh;
+	margin: 16px 2%;
 	display: flex;
+	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	flex-direction: column;
 }
 .cabecalho-logo{
 	width: 100%;
@@ -48,58 +45,172 @@ body {
 }
 .cabecalho-nav{
 	width: 100%;
+	min-height: 60vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 .cabecalhoNav-form{
+	width: 100%;
+	height: 56px;
+	padding: 2% 5%;
 	border-radius: 30px;
 	background: #fff;
 	display: flex;
 	align-items: center;
-	padding: 4px 24px;
-	height: 56px;
+	justify-content: space-between;
 }
 .navForm-texto{
-	font-size: 1.63em;
-	color: #2e3192;
+	width: 90%;
 	border-style: none;
 	border-radius:30px;
+	font-size: 1.10em;
+	color: #2e3192;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 400;
 }
 .navForm-botao{
 	width: 28px;
 	border-top: 10px;
 }
 .cabecalhoNav-item{
+	width: 100%;
+	height: 70px;
+	padding: 1% 24px;
+	border: solid 7px #fcae1b;
+	border-radius: 30px;
+	font-size: 1.10em;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #fff;
+	background-color: #f26522;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	height: 70px;
-	border-radius: 30px;
-	font-size: 1.28em;
-	color: #fff;
-	padding-left: 24px;
-	border: solid 10px #fcae1b;
-	background-color: #f26522
+	
 }
 .navItem-logo{
-	height: 25px;
+	height: 22px;
 }
-.conteudo{
-	display: flex;
+.cabecalho-mobile{
+	background: url(Assets/background.svg) center no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	background-color: #f26522;
-
-
+	align-content: flex-start;
+		
 }
-.conteudoTexto-titulo{}
-.conteudoTexto-parag{}
-.conteudo-vnw{}
-.conteudoVnw-logo{}
-.conteudoVnw-parag{}
-.conteudoVnw-link{}
+@media(max-width: 640px){
+	.cabecalho-mobile{
+		display: flex;
+	}
+}
+.cabecalhoLogo-mobile{
+	width: 65%;
+	margin: 12px;
+}
+.cabecalhoNavForm-mobile{
+	width: 85%;
+	/*height: 50px;*/
+	padding: 2% 5%;
+	border-radius: 30px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navFormTexto-mobile{
+	width: 90%;
+	border-style: none;
+	border-radius:30px;
+	font-size: 1.20em;
+	color: #2e3192;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+.conteudo{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: #f26522;
+}
+.conteudo-texto{
+	width: 32%;
+	margin: 3%;
+}
+.conteudoTexto-titulo{
+	font-size: 2.30em;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	color: #2e3192;
+	text-align: left;
+	margin-bottom: 21px;
+}
+.conteudo-vnw{
+	width: 32%;
+	margin: 3% 5%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+.conteudoVnw-logo{
+	width: 50%;
+	margin: 12px;
+}
+.conteudo-parag{
+	font-size: 1em;
+	font-family: ff-basic-gothic-pro, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	color: #fff;
+	text-align: left;
+}
+.conteudoVnw-link{
+	width: 259px;
+	height: 55px;
+	margin-top: 10%;  
+	padding-top: 4px; 
+	border: solid 7px #fff;
+	border-radius: 40px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.30em;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	color: #fff;
+}
 .rodape{
+	width: 20%;
+	min-height: 100vh;
+	padding: 2%;
 	background-color: #f26522;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-end;
 }
-.rodape-logo{}
+.rodape-logo1sti{
+	width: 40%;
+	margin: 20%;
+}
+.rodape-logoEducap{
+	width: 70%;
+	margin: 20%;
+}
+.rodape-logoPrecisa{
+	width: 70%;
+	margin: 20%;
+}
