@@ -96,16 +96,16 @@ body {
 	height: 22px;
 }
 .cabecalho-mobile{
-	background: url(Assets/background.svg) center no-repeat;
-	background-size: cover;
+	background: url(Assets/background.svg) center bottom no-repeat;
+	background-size: auto;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	padding-bottom: 250px;
 	display: none;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: flex-start;
-		
 }
 @media(max-width: 640px){
 	.cabecalho-mobile{
@@ -118,7 +118,6 @@ body {
 }
 .cabecalhoNavForm-mobile{
 	width: 85%;
-	/*height: 50px;*/
 	padding: 2% 5%;
 	border-radius: 30px;
 	background: #fff;
@@ -136,17 +135,90 @@ body {
 	font-style: normal;
 	font-weight: 400;
 }
+.navFormBotao-mobile{
+	width: 27px;
+	border-top: 10px;
+}
+.cabecalhoNav-mobile{
+	width: 85%;
+	min-height: 60vh;
+	margin-top: 28px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+@media(max-width: 400px){
+	.cabecalhoNav-mobile{
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+}
+.cabecalhoNavItem-mobile{
+	width: 48%;
+	height: 70px;
+	padding: 1% 24px;
+	border: none;
+	border-radius: 50px;
+	font-size: 1.30em;
+	font-family: ministry, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #fff;
+	text-align: left;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cabecalhoNavItem-mobile:focus{
+	background-color: #f26522
+}
+
+@media(max-width: 400px){
+	.cabecalhoNavItem-mobile{
+		width: 90%;
+		margin:5px 0;
+	}
+}
+.cabecalhoNavItem-mobile span{
+	width: 75%;
+	padding: 0 10%;
+}
+.navItemCaixaLogo-mobile{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navItemLogo-mobile{
+	height: 45px;
+	margin: 10px;
+}
 .conteudo{
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
-	justify-content: flex-start;
+	flex-flow: row wrap;
+	justify-content: center;
 	align-items: flex-start;
 	background-color: #f26522;
 }
+@media(max-width: 640px){
+	.conteudo{
+		/*min-width: 100%;*/
+	}
+}
 .conteudo-texto{
 	width: 32%;
+	min-width: 400px;
 	margin: 3%;
+}
+@media(max-width: 640px){
+	.conteudo-texto{
+		min-width: 90%;
+	}
 }
 .conteudoTexto-titulo{
 	font-size: 2.30em;
@@ -159,11 +231,17 @@ body {
 }
 .conteudo-vnw{
 	width: 32%;
+	min-width: 400px;
 	margin: 3% 5%;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: flex-start;
+}
+@media(max-width: 640px){
+	.conteudo-vnw{
+		min-width: 90%;
+	}
 }
 .conteudoVnw-logo{
 	width: 50%;
@@ -194,23 +272,66 @@ body {
 }
 .rodape{
 	width: 20%;
+	min-width: 200px;
 	min-height: 100vh;
 	padding: 2%;
 	background-color: #f26522;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
 	align-items: center;
 	justify-content: flex-end;
+
+	/*background-color: red;*/
+}
+@media(max-width: 1250px){
+	.rodape{
+		width: auto;
+		min-width: auto;
+		max-width: 50%;
+		min-height: 30vh;
+		justify-content: center;
+		align-items: center;
+		align-content: flex-start;
+	}
+}
+@media(max-width: 640px){
+	.rodape{
+		max-width: 90%;
+	}
 }
 .rodape-logo1sti{
 	width: 40%;
+	min-width: 100px;
 	margin: 20%;
+}
+@media(max-width: 1250px){
+	.rodape-logo1sti{
+		width: 20%;
+		min-width: auto;
+		margin: 10px auto;
+	}
 }
 .rodape-logoEducap{
 	width: 70%;
+	min-width: 150px;
 	margin: 20%;
+}
+@media(max-width: 1250px){
+	.rodape-logoEducap{
+		width: 35%;
+		min-width: auto;
+		margin: 10px auto;
+	}
 }
 .rodape-logoPrecisa{
 	width: 70%;
+	min-width: 150px;
 	margin: 20%;
+}
+@media(max-width: 1250px){
+	.rodape-logoPrecisa{
+		width: 35%;
+		min-width: auto;
+		margin: 10px auto;
+	}
 }
